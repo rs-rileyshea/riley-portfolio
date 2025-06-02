@@ -29,6 +29,37 @@ section {
   margin: 0 auto;
 }
 
+.button {
+  background-color: #4a4aff;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 8px;
+  display: inline-block;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+input, textarea {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #aaa;
+  font-family: inherit;
+}
+
+button {
+  background: #4a4aff;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
 /* Timeline layout */
 .timeline {
   position: relative;
