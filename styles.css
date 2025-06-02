@@ -82,13 +82,16 @@ h3 {
   border-radius: 8px;
 }
 
-.button {
-  background-color: #4a4aff;
-  color: white;
+.resume-button {
+  background: linear-gradient(to right, #ffb6c1, #add8e6);
   padding: 10px 20px;
+  border-radius: 5px;
   text-decoration: none;
-  border-radius: 8px;
-  display: inline-block;
+  color: #000;
+  font-weight: bold;
+}
+.pub-thumbnail:hover {
+  transform: scale(1.05);
 }
 
 form {
