@@ -35,13 +35,14 @@ header {
   text-align: center;
 }
 
-h1#name:hover {
-  animation: colorShift 1s infinite alternate;
+.hover-name {
+  font-size: 3em;
+  transition: color 0.3s, transform 0.3s;
 }
 
-@keyframes colorShift {
-  from { color: #fff; }
-  to { color: #ff69b4; }
+.hover-name:hover {
+  color: #ff70a6;
+  transform: scale(1.05);
 }
 
 section {
@@ -56,69 +57,38 @@ h3 {
 }
 
 .timeline {
-  border-left: 2px solid transparent;
-  background-image: linear-gradient(to bottom, #ff69b4, #6495ed);
-  background-repeat: no-repeat;
-  background-size: 2px 100%;
-  background-position: left center;
+  list-style: none;
+  padding-left: 0;
+  line-height: 1.8;
 }
 
-/* Entry bubbles */
-.journey-entry {
-  border: 2px solid transparent;
-  padding: 1em;
-  margin: 1em 0;
-  border-radius: 10px;
-  background: #fff;
-  box-shadow: 0 0 10px rgba(0,0,0,0.05);
-  transition: border 0.4s ease, filter 0.4s ease;
-  position: relative;
+.cards {
+  display: grid;
+  gap: 20px;
 }
 
-.journey-entry.pink {
-  border-image: linear-gradient(45deg, #ffb6c1, #ff69b4) 1;
+.card {
+  background: #ffffffcc;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
 }
 
-.journey-entry.blue {
-  border-image: linear-gradient(45deg, #add8e6, #6495ed) 1;
-}
-
-.journey-entry.glow {
-  filter: brightness(1.2);
-  box-shadow: 0 0 15px rgba(255, 105, 180, 0.4);
-  z-index: 1;
-}
-
-/* Timeline dots */
-.journey-entry::before {
-  content: '';
-  position: absolute;
-  left: -30px;
-  top: 20px;
-  width: 12px;
-  height: 12px;
-  background-color: #fff;
-  border: 2px solid #ccc;
-  border-radius: 50%;
-}
-
-.pub-thumbnail {
+.thumbnail {
   max-width: 300px;
-  border: 2px solid #ccc;
+  display: block;
+  margin: 20px auto;
+  border: 3px solid #b5179e;
   border-radius: 8px;
-  transition: transform 0.3s;
-}
-.pub-thumbnail:hover {
-  transform: scale(1.05);
 }
 
-.resume-button {
-  background: linear-gradient(to right, #ffb6c1, #add8e6);
+.button {
+  background-color: #4a4aff;
+  color: white;
   padding: 10px 20px;
-  border-radius: 5px;
   text-decoration: none;
-  color: #000;
-  font-weight: bold;
+  border-radius: 8px;
+  display: inline-block;
 }
 
 form {
@@ -141,10 +111,4 @@ button {
   padding: 10px;
   border-radius: 8px;
   cursor: pointer;
-}
-
-  border-radius: 5px;
-  text-decoration: none;
-  color: #000;
-  font-weight: bold;
 }
