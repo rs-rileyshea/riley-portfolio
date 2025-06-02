@@ -35,14 +35,13 @@ header {
   text-align: center;
 }
 
-.hover-name {
-  font-size: 3em;
-  transition: color 0.3s, transform 0.3s;
+h1#name:hover {
+  animation: colorShift 1s infinite alternate;
 }
 
-.hover-name:hover {
-  color: #ff70a6;
-  transform: scale(1.05);
+@keyframes colorShift {
+  from { color: #fff; }
+  to { color: #ff69b4; }
 }
 
 section {
@@ -57,38 +56,69 @@ h3 {
 }
 
 .timeline {
-  list-style: none;
-  padding-left: 0;
-  line-height: 1.8;
+  border-left: 2px solid transparent;
+  background-image: linear-gradient(to bottom, #ff69b4, #6495ed);
+  background-repeat: no-repeat;
+  background-size: 2px 100%;
+  background-position: left center;
 }
 
-.cards {
-  display: grid;
-  gap: 20px;
+/* Entry bubbles */
+.journey-entry {
+  border: 2px solid transparent;
+  padding: 1em;
+  margin: 1em 0;
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+  transition: border 0.4s ease, filter 0.4s ease;
+  position: relative;
 }
 
-.card {
-  background: #ffffffcc;
-  padding: 20px;
-  border-radius: 12px;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+.journey-entry.pink {
+  border-image: linear-gradient(45deg, #ffb6c1, #ff69b4) 1;
 }
 
-.thumbnail {
+.journey-entry.blue {
+  border-image: linear-gradient(45deg, #add8e6, #6495ed) 1;
+}
+
+.journey-entry.glow {
+  filter: brightness(1.2);
+  box-shadow: 0 0 15px rgba(255, 105, 180, 0.4);
+  z-index: 1;
+}
+
+/* Timeline dots */
+.journey-entry::before {
+  content: '';
+  position: absolute;
+  left: -30px;
+  top: 20px;
+  width: 12px;
+  height: 12px;
+  background-color: #fff;
+  border: 2px solid #ccc;
+  border-radius: 50%;
+}
+
+.pub-thumbnail {
   max-width: 300px;
-  display: block;
-  margin: 20px auto;
-  border: 3px solid #b5179e;
+  border: 2px solid #ccc;
   border-radius: 8px;
+  transition: transform 0.3s;
+}
+.pub-thumbnail:hover {
+  transform: scale(1.05);
 }
 
-.button {
-  background-color: #4a4aff;
-  color: white;
+.resume-button {
+  background: linear-gradient(to right, #ffb6c1, #add8e6);
   padding: 10px 20px;
+  border-radius: 5px;
   text-decoration: none;
-  border-radius: 8px;
-  display: inline-block;
+  color: #000;
+  font-weight: bold;
 }
 
 form {
