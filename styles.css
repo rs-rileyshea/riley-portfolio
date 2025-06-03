@@ -132,12 +132,25 @@ section {
   display: block !important;
 }
 
-.thumbnail {
-  max-width: 300px;
-  display: block;
-  margin: 20px auto;
-  border: 3px solid #b5179e;
+/* Publication Thumbnail */
+.publication-thumbnail {
+  display: inline-block;
+  transition: all 0.3s ease;
   border-radius: 8px;
+  overflow: hidden;
+  width: 200px; /* Adjust size as needed */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.publication-thumbnail img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.publication-thumbnail:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(163, 140, 251, 0.6); /* Purple glow */
 }
 
 .button {
