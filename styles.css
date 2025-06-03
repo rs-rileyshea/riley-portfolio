@@ -122,6 +122,11 @@ section {
   padding: 0 1rem; /* Prevent text overflow */
 }
 
+#publications {
+  border-bottom: 1px dashed rgba(255, 107, 107, 0.3);
+  padding-bottom: 3rem; /* Extra space above border */
+}
+
 .thumbnail {
   max-width: 300px;
   display: block;
