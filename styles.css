@@ -97,24 +97,19 @@ section {
   display: inline-block;
 }
 
-form {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
+.contact-section {
+  text-align: center;
+  padding: 2rem 0;
 }
 
-input, textarea {
-  padding: 10px;
-  border-radius: 8px;
-  border: 1px solid #aaa;
-  font-family: inherit;
+.email-link a {
+  font-size: 3rem;
+  color: #ff6b6b; /* Match your accent color */
+  transition: all 0.3s ease;
 }
 
-button {
-  background: #4a4aff;
-  color: white;
-  border: none;
-  padding: 10px;
-  border-radius: 8px;
-  cursor: pointer;
+.email-link a:hover {
+  color: #ff8e8e;
+  text-shadow: 0 0 15px #ff6b6b, 0 0 25px #ff6b6b; /* Glow effect */
+  transform: scale(1.1);
 }
