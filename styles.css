@@ -62,6 +62,11 @@ section {
   border-color: #6495ed;
 }
 
+section {
+  padding: 1em 2em;
+  max-width: 800px;
+  margin: 0 auto;
+}
 /* Featured Projects - Bubble Style */
 .projects-grid {
   display: flex;
