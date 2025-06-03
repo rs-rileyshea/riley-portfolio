@@ -127,6 +127,22 @@ section {
   padding-bottom: 3rem; /* Extra space above border */
 }
 
+/* Force vertical layout for Publications + CV */
+#publications, #cv {
+  width: 100%;
+  padding: 2rem 0;
+  display: block; /* Override any flexbox */
+}
+
+#publications {
+  margin-bottom: 2rem; /* Add space between sections */
+}
+
+/* If either section has flex/grid, reset it */
+#publications .container, #cv .container {
+  display: block !important;
+}
+
 .thumbnail {
   max-width: 300px;
   display: block;
