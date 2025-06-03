@@ -74,6 +74,21 @@ h3 {
   box-shadow: 0 3px 10px rgba(0,0,0,0.1);
 }
 
+.journey-entry {
+  border: 2px solid;
+  border-radius: 25px;
+  padding: 15px 20px;
+  margin: 10px 0;
+}
+
+.journey-entry.pink {
+  border-color: #ff69b4;
+}
+
+.journey-entry.blue {
+  border-color: #6495ed;
+}
+
 .thumbnail {
   max-width: 300px;
   display: block;
