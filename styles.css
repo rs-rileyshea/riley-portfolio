@@ -62,46 +62,48 @@ section {
   border-color: #6495ed;
 }
 
-/* Updated Project Bubbles */
-.projects-container {
+/* Featured Projects - Bubble Style */
+.projects-grid {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 2rem;
-  padding: 2rem;
+  gap: 3rem;
+  padding: 2rem 0;
 }
 
 .project-bubble {
-  width: 250px; /* Increased from 200px */
-  height: 250px; /* Increased from 200px */
+  width: 280px;
+  padding: 2rem;
   border-radius: 50%;
-  background: rgba(255, 107, 107, 0.1);
-  border: 2px solid #ff6b6b;
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid #a38cfb; /* Purple from publications thumbnail */
+  text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  text-align: center;
-  padding: 1.5rem; /* Added more padding */
   transition: all 0.3s ease;
-  margin: 1rem; /* Ensure spacing */
-}
-
-.project-bubble:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 20px rgba(255, 107, 107, 0.5);
-  background: rgba(255, 107, 107, 0.2);
+  position: relative;
+  margin: 0 auto; /* Center bubbles */
 }
 
 .project-bubble h3 {
+  color: #ff6b6b; /* Your accent color */
   margin-bottom: 0.5rem;
-  font-size: 1.3rem; /* Larger title */
+  font-size: 1.3rem;
 }
 
 .project-bubble p {
-  font-size: 1rem; /* Larger text */
-  margin-top: 0.5rem;
-  padding: 0 1rem; /* Prevent text overflow */
+  font-size: 0.95rem;
+  line-height: 1.4;
+  padding: 0 1rem;
+}
+
+/* Hover Effects */
+.project-bubble:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(163, 140, 251, 0.4); /* Purple glow */
+  background: rgba(255, 255, 255, 0.15);
 }
 
 #publications {
