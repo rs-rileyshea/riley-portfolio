@@ -111,25 +111,28 @@ section {
   background: rgba(255, 255, 255, 0.15);
 }
 
-/* Publication Thumbnail */
+/* Publication Thumbnail - Fixed Size with Glow */
 .publication-thumbnail {
   display: inline-block;
+  width: 250px; /* Fixed width (adjust as needed) */
+  height: auto; /* Maintain aspect ratio */
   transition: all 0.3s ease;
   border-radius: 8px;
   overflow: hidden;
-  width: 200px; /* Adjust size as needed */
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
 .publication-thumbnail img {
-  width: 100%;
+  width: 100%; /* Force image to fill container */
   height: auto;
   display: block;
+  object-fit: cover; /* Prevent distortion */
 }
 
 .publication-thumbnail:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 20px rgba(163, 140, 251, 0.6); /* Purple glow */
+  transform: scale(1.05); /* Slight grow effect */
+  box-shadow: 0 0 25px rgba(163, 140, 251, 0.7); /* Stronger glow */
+  /* Size remains stable during hover */
 }
 
 .button {
